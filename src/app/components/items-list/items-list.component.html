@@ -1,0 +1,12 @@
+<h3> {{title}} </h3>
+
+<div class="itemList">
+    <div class="card" style="width: 15rem;" *ngFor="let item of itemList">
+        <img [src]="item.img" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">{{item.name}}</h5>
+          <p class="card-text"> Precio: $ {{item.price}} </p>
+          <a href="#" class="btn btn-primary" (click)="add(item)"> + </a>
+        </div>
+      </div>
+</div>

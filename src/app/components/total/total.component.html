@@ -1,0 +1,40 @@
+<div class="container">
+    <h2> Cesta </h2>
+    <div class="total" *ngFor="let item of total; let indice = index">
+        <span>
+            <p>  {{item.name}} x {{item.qty}} -  ${{item.price * item.qty}} </p>
+        <button class="btn btn-danger" (click)="deleteItem(indice)"> x </button>
+        </span>
+    </div>
+    <hr>
+    <h3> Total: $ {{calcTotal()}} </h3>
+</div>
+<br>
+<br>
+
+<div class="container">
+    <h3> Métodos de Pago </h3>
+
+     <form>
+        <div class="form-group">
+            <label> Ingrese monto a pagar: </label>
+            <input type="number" class="form-control" [(ngModel)]="monto" >
+        </div>
+
+        <button class="btn btn-primary"> 
+            Pagar
+         </button>
+     </form>
+
+
+
+    
+
+    <div class="alert alert-success" role="alert" *ngIf="alertaPagoCompleto">
+        <h5> ¡El Cliente ha realizado su pago completo!  </h5>
+      </div>
+
+    
+
+
+</div>

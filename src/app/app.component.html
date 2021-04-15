@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <app-items-list title="Cátalogo de Productos" [itemList] ="items" (itemSelect)="onItemSelect($event)"></app-items-list>
+    </div>
+    <div class="col-6">
+      <app-total [total]="totalItems"></app-total>
+    </div>
+  </div>
+</div>
+
+<router-outlet><router-outlet>
